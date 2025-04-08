@@ -144,7 +144,7 @@ const CodeSnippetManager = () => {
               <SelectValue placeholder="All Languages" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Languages</SelectItem>
+              <SelectItem value="all">All Languages</SelectItem>
               {LANGUAGES.map(lang => (
                 <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
               ))}
