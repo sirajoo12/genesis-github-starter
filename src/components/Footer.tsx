@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Github, Heart } from 'lucide-react';
+import { Github, Heart, Code } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -21,10 +22,14 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="hidden md:flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-muted-foreground hover:text-github-blue transition-colors">Home</a>
+            <Link to="/" className="text-sm text-muted-foreground hover:text-github-blue transition-colors">Home</Link>
             <a href="#projects" className="text-sm text-muted-foreground hover:text-github-blue transition-colors">Projects</a>
             <a href="#skills" className="text-sm text-muted-foreground hover:text-github-blue transition-colors">Skills</a>
             <a href="#contact" className="text-sm text-muted-foreground hover:text-github-blue transition-colors">Contact</a>
+            <Link to="/snippets" className="text-sm text-muted-foreground hover:text-github-blue transition-colors flex items-center gap-1">
+              <Code className="w-3 h-3" />
+              Snippets
+            </Link>
           </div>
         </div>
       </div>
